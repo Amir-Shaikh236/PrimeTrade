@@ -29,11 +29,7 @@ connectDB();
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
-
-const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' });
-app.use(morgan('combined', { stream: accessLogStream }));
 app.use(morgan('dev'));
-
 
 app.use('/api/auth', authRoutes);
 app.use('/api/trades', tradeRoutes);
