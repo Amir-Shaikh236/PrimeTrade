@@ -183,7 +183,7 @@ export default function Trades() {
                                 />
                             </div>
                             <Button type="submit" disabled={isSubmitting} className={editingId ? "bg-blue-600" : ""}>
-                                {isSubmitting ? <Loader2 className="h-4 w-4 animate-spin" /> : editingId ? "Update" : <Plus className="h-4 w-4" />}
+                                {isSubmitting ? <Loader2 className="h-4 w-4 animate-spin" /> : editingId ? "" : <Plus className="h-4 w-4" />}
                                 <span className="ml-2">{editingId ? "Update" : "Add"}</span>
                             </Button>
                         </form>
