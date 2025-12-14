@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
-import Register from './components/Register'
-import Login from './components/login'
-import Trades from './components/trades'
+import Register from '@/components/register'
+import Login from '@/components/login'
+import Trades from '@/components/trades'
 
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('token');
