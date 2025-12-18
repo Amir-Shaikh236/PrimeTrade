@@ -4,9 +4,10 @@ services:
     build: ./Backend
     ports:
       - 5000:5000
+    
+    env_file:
+      - ./Backend/.env
     environment:
-      - MONGO_URI=mongodb+srv://skamir2410:portfolio@cluster0.xlexwow.mongodb.net/Trade?retryWrites=true&w=majority&appName=Cluster0
-      - JWT_SECRET=9cc3a3ee5c858b9ff838524fb6d45162657008930ebbf72147079e093a86626b718938ac4161f8598a9f976c9def6957e9677b5aa4f69866403c8e3941e1cef9
       - PORT=5000
   
   frontend:
